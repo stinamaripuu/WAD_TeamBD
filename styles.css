@@ -1,28 +1,110 @@
+/* Reset some default styling in browsers */
+/*
 
-.flexbox {
+Blue: rgb:37,19,94 Purple: rbg:118,60,189 Green: rgb:10,237,172 White: rgb:242,242,242 or rgb: 255,255,255
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(118,60,189);
+}
+
+.nav_bar {
+    background-color: rgb(37,19,94);
+    overflow: hidden;
+    padding: 10px;
+    text-align: left;
+    padding: 2em;
+}
+
+/* Style the links inside the navigation bar */
+.nav_bar a {
+    color: rgb(10,237,172);
+    text-align: center;
+    font-size: x-large;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.nav_bar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Set up the container */
+.cont {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .flexbox > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
-  }
-.nav_bar{
-    width: 100%;
-    background-color: 118,60,189;
-    position: relative; /* Positioning context for navbar */
+    justify-content: center;
+    min-height: 100vh;
 }
 
-.navbar a {
-    display: block; /* Makes the link block-level */
-    padding: 14px 16px; /* Adds some padding */
-    color: white; /* Text color */
-    text-decoration: none; /* Removes underline */
-    font-size: 24px; /* Adjusts font size */
+/* Set up the box */
+.box {
+    background-color: rgb(37,19,94);
+    padding: 20px;
+    
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4); /* Horizontal shadow, Vertical shadow, Blur, Color */
+
 }
+
+/* Style the labels and inputs */
+.box label,
+.box textarea,
+.box input[type="file"],
+.box button {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Style the button */
+.box button {
+    cursor: pointer;
+    background-color: rgb(10,237,172);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style button on hover */
+.box button:hover {
+    background-color: rgba(10,237,172, 0.8);
+}
+
+/* ... previous styles ... */
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .cont {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 25px;
+        box-sizing: border-box; /* Ensures padding doesn't expand beyond 100% width/height */
+    }
+}
+
