@@ -1,73 +1,109 @@
-/* Reset some default styling in browsers */
-/*
-
-Blue: rgb:37,19,94 Purple: rbg:118,60,189 Green: rgb:10,237,172 White: rgb:242,242,242 or rgb: 255,255,255
-
-*/
 * {
+    font-family: sans-serif;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     background-color: rgb(118,60,189);
+    transform: 800px;
 }
 
-.nav_bar {
-    background-color: rgb(37,19,94);
-    overflow: hidden;
-    padding: 10px;
-    text-align: left;
-    padding: 2em;
+ul {
+    list-style: none;
 }
 
-/* Style the links inside the navigation bar */
-.nav_bar a {
-    color: rgb(10,237,172);
-    text-align: center;
-    font-size: x-large;
-    padding: 14px 20px;
+a {
+    color: #34495e;
     text-decoration: none;
 }
 
-/* Change the color of links on hover */
-.nav_bar a:hover {
-    background-color: #ddd;
-    color: black;
+.nav a:hover {
+    background-color: #7ebeb6;
+    color: #092747;
 }
 
-/* Set up the container */
-.cont {
+.header {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rgb(37,19,94);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+}
+
+.nav {
+    margin-left: 5px;
+}
+
+.nav a {
+    padding: 10px 15px;
+    text-align: center;
+    display: block;
+    color: white;
+    font-size: .99em;
+}
+
+@media (max-width: 799px) {
+    .nav, .header {
+        flex-direction: column;
+        display: flex;
+    }        
+        
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 800px) {
+    .header, .nav {
+        display: flex;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.flexboxI {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    flex-wrap: wrap;
 }
 
-/* Set up the box */
+.post {
+    background-color: rgb(171, 148, 244);
+    margin: 10px;
+    padding: 20px;
+    font-size: 15px;
+    width: 90%;
+}
+
 .box {
     background-color: rgb(37,19,94);
     padding: 20px;
-    
+    margin: 40px;
     border-radius: 8px;
     color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4); /* Horizontal shadow, Vertical shadow, Blur, Color */
-
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4); 
 }
 
-/* Style the labels and inputs */
-.box label,
-.box textarea,
-.box input[type="file"],
-.box button {
+.box label, .box textarea, .box input[type="file"], .box button {
     display: block;
     margin-bottom: 20px;
     width: 100%;
 }
 
-/* Style the button */
 .box button {
     cursor: pointer;
     background-color: rgb(10,237,172);
@@ -77,34 +113,13 @@ body {
     border-radius: 5px;
 }
 
-/* Style button on hover */
 .box button:hover {
     background-color: rgba(10,237,172, 0.8);
 }
 
-/* ... previous styles ... */
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    body, html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .cont {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .box {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 25px;
-        box-sizing: border-box; /* Ensures padding doesn't expand beyond 100% width/height */
-    }
+.FooterI {
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 
