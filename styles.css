@@ -1,0 +1,94 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    -webkit-transform: 800px;
+       -moz-transform: 800px;
+            transform: 800px;
+     }
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+
+a {
+    color: #34495e;
+    text-decoration: none;
+    }
+    .nav a:hover {
+        background-color: #7ebeb6;
+        color: #092747;
+                 }
+    .header {
+        padding-top: .5em;
+        padding-bottom: .5em;
+        border: 1px solid #646174;
+        background-color: #a2ccea;
+        box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .nav {
+        margin-top: 5px;
+         }
+    
+    .nav a {
+        padding: 10px 15px;
+        text-align: center;
+        display: block;
+        color: #34495e;
+        font-size: .99em;
+           }
+
+           @media (max-width: 799px) {
+            .logo {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 800px) {
+            .header,
+            .nav {
+                display: flex;
+            }
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+            /* 
+             Applies when the browser's width is 1000px wide or wider: 
+             */
+        
+        @media (min-width: 1000px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+}
+
+.flexboxI {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .flexboxI > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .FooterI {
+    flex-direction: row;
+    justify-content: space-between;
+  }
