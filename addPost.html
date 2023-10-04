@@ -13,26 +13,37 @@
     <header class="header">
         <ul class="nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Home2</a></li>
         </ul>
 
-        <a><img src="images.jpg" width="50" height="50" alt="My picture" class="logo"></a>
+        <a><img src="res/images/images.jpg" width="50" height="50" alt="My picture" class="logo"></a>
     </header>
 
     <div class="flexboxI">
         <div class= "box">
             <label for="addText">Post body:</label>
-            <textarea id="addText" placeholder="textrea" rows="10" cols="30"></textarea>
+            <textarea id="addText" placeholder="textarea" rows="10" cols="30"></textarea>
             <label for="inputFile">Select file:</label>
             <input type="file" id="inputFile" />
             <br>
-            <button>Create Post</button>
+            <button onclick="navigateToHome()">Create Post</a></button>
 
         </div>
 
-      </div>
+    </div>
 
+    <footer>
+        <ul>
+            <li>Kaarel Tamuri</li>
+            <li>Birgit Parra</li>
+            <li>Stina-Marie Maripuu</li>
+        </ul>
+    </footer>
 
+<script>
+    function navigateToHome() {
+        window.location.href = "/index.html";
+    }
+</script>
 </body>
 
 </html>

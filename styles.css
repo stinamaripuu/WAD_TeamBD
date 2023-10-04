@@ -2,17 +2,45 @@
     font-family: sans-serif;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;;
 }
 
 body {
     line-height: 1.6;
-    background-color: rgb(118,60,189);
+    background-color: #18191a;
     transform: 800px;
+    color: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    
+   
 }
+
+
 
 ul {
     list-style: none;
+}
+
+
+
+header {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    background-color: #242526;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    margin-inline: 2em;
+    border-radius: 50%;
 }
 
 a {
@@ -20,20 +48,11 @@ a {
     text-decoration: none;
 }
 
-.nav a:hover {
-    background-color: #7ebeb6;
-    color: #092747;
-}
 
-.header {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background-color: rgb(37,19,94);
-    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-}
 
 .nav {
-    margin-left: 5px;
+    margin-inline: 2em;
+    
 }
 
 .nav a {
@@ -42,32 +61,39 @@ a {
     display: block;
     color: white;
     font-size: .99em;
+    border-radius: 3px;
+}
+
+.nav a:hover {
+    background-color: #E5C3A6;
+    color: #092747;
+    transition: 50ms;
 }
 
 @media (max-width: 799px) {
-    .nav, .header {
+    .nav, header, footer {
         flex-direction: column;
         display: flex;
     }        
         
-    .header {
+    header,footer {
         flex-direction: column;
         align-items: center;
     }
 }
 
 @media (min-width: 800px) {
-    .header, .nav {
+    header, .nav {
         display: flex;
     }
-    .header {
+    header {
         flex-direction: column;
         align-items: center;
     }
 }
 
 @media (min-width: 1000px) {
-    .header {
+    header {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -79,23 +105,70 @@ a {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    flex: 1;
+     
+}
+
+.flexboxI > div{ /*Child Selector*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+
 }
 
 .post {
-    background-color: rgb(171, 148, 244);
-    margin: 10px;
+    background-color: #3a3b3c;
+    margin: 20px;
     padding: 20px;
     font-size: 15px;
+    border-radius: 8px;
     width: 90%;
+    
+}
+
+.post > img{ /*Child Selector*/
+    border-radius: 8px;
+    width: 640px;
+    height: 360px;
+    display: block;
+    object-fit: cover; 
+}
+
+.andmed ul{
+    display: flex;
+    align-items: left;
+    
+}
+
+.andmed li{
+    display: inline-block;
+    padding-right: 10px;
+    
+}
+
+.andmed li >img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+
+.andmed + p{ /*Adjacent Sibling Selector */
+    font-weight:bold;
+    padding-top: 25px;
+    
+}
+
+.andmed ~ p{ /*General Sibling Selector*/
+    padding-bottom: 15px;
+
+
 }
 
 .box {
-    background-color: rgb(37,19,94);
+    background-color: #3a3b3c;
     padding: 20px;
     margin: 40px;
     border-radius: 8px;
     color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4); 
 }
 
 .box label, .box textarea, .box input[type="file"], .box button {
@@ -106,18 +179,64 @@ a {
 
 .box button {
     cursor: pointer;
-    background-color: rgb(10,237,172);
-    color: #fff;
+    
+
+    background-color: #83715f;
+    color: whitesmoke;
     border: none;
     padding: 10px;
     border-radius: 5px;
 }
 
 .box button:hover {
-    background-color: rgba(10,237,172, 0.8);
+    background-color: #E5C3A6;
+    color: #092747;
+    transition: 150ms;
 }
 
-.FooterI {
-    flex-direction: row;
-    justify-content: space-between;
+#addText{ /*ID Selector*/
+    border-radius: 8px;
+    background-color: #787a7c;
+    padding: 0.5em;
+    color:whitesmoke;
+    resize: none;
+
+}
+
+textarea::placeholder{ /*pseudo-element*/
+    color: whitesmoke;
+    opacity: 0.5;
+}
+
+
+
+
+
+footer {
+    background-color: #242526;
+    color: whitesmoke;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Using flexbox */
+    justify-content: center; /* Centering items horizontally */
+    align-items: center; /* Centering items vertically */
+    
+}
+
+footer li {
+    display: inline-block; /* Making the list items inline */
+    margin: 10px;
+    opacity: 0.5;
 }
