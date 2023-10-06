@@ -162,6 +162,13 @@ a {
 
 
 }
+.login {
+  text-align: center;
+}
+
+.login a{
+  color: #E5C3A6;
+}
 
 .box {
     background-color: #3a3b3c;
