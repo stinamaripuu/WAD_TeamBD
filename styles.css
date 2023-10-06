@@ -1,0 +1,28 @@
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .flexbox > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+.nav_bar{
+    width: 100%;
+    background-color: 118,60,189;
+    position: relative; /* Positioning context for navbar */
+}
+
+.navbar a {
+    display: block; /* Makes the link block-level */
+    padding: 14px 16px; /* Adds some padding */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 24px; /* Adjusts font size */
+}
