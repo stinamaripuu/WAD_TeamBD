@@ -8,7 +8,6 @@
 body {
     line-height: 1.6;
     background-color: #18191a;
-    transform: 800px;
     color: whitesmoke;
 
     display: flex;
@@ -46,8 +45,13 @@ header {
 a {
     color: #34495e;
     text-decoration: none;
+    display: inline-block;
+    
 }
 
+a:active{
+    opacity: 0.8;
+}
 
 
 .nav {
@@ -59,7 +63,7 @@ a {
     padding: 10px 15px;
     text-align: center;
     display: block;
-    color: white;
+    color: whitesmoke;
     font-size: .99em;
     border-radius: 3px;
 }
@@ -130,11 +134,12 @@ a {
     height: 360px;
     display: block;
     object-fit: cover; 
+    max-width: 100%;
 }
 
 .andmed ul{
     display: flex;
-    align-items: left;
+    align-items: center;
     
 }
 
@@ -162,21 +167,56 @@ a {
 
 
 }
-.login {
-  text-align: center;
+
+#login{
+    text-align: center;
 }
 
-.login a{
-  color: #E5C3A6;
+
+
+
+#login a{
+    color: #E5C3A6;
+    padding: 5px;
 }
+
+#login a:hover{
+    transform: scale(1.03);
+    transition: transform 150ms;
+}
+
+
+
+
+#logInButton{
+    margin-top: 2em;
+}
+
+
+
+
+
+
 
 .box {
     background-color: #3a3b3c;
     padding: 20px;
     margin: 40px;
     border-radius: 8px;
-    color: white;
+    color: whitesmoke;
+    min-width: 300px;
 }
+
+.box h2{
+    font-weight: bold;
+    margin:1em;
+}
+
+.box > form{
+    padding-top: 2em;
+}
+
+
 
 .box label, .box textarea, .box input[type="file"], .box button {
     display: block;
@@ -186,31 +226,40 @@ a {
 
 .box button {
     cursor: pointer;
-    
 
     background-color: #83715f;
     color: whitesmoke;
     border: none;
     padding: 10px;
     border-radius: 5px;
+    display: block;
 }
 
-.box button:hover {
+.box button:hover{
     background-color: #E5C3A6;
     color: #092747;
     transition: 150ms;
 }
 
-#addText{ /*ID Selector*/
+.box button:active{
+    opacity: 0.8;
+}
+
+
+
+#addText, #emailA, #emailP{ /*ID Selector*/
     border-radius: 8px;
     background-color: #787a7c;
     padding: 0.5em;
     color:whitesmoke;
     resize: none;
+    width: 100%;
+    margin-top:0.2em;
+    
 
 }
 
-textarea::placeholder{ /*pseudo-element*/
+::placeholder{ /*pseudo-element*/
     color: whitesmoke;
     opacity: 0.5;
 }
@@ -236,14 +285,14 @@ footer ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Using flexbox */
-    justify-content: center; /* Centering items horizontally */
-    align-items: center; /* Centering items vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     
 }
 
 footer li {
-    display: inline-block; /* Making the list items inline */
+    display: inline-block; 
     margin: 10px;
     opacity: 0.5;
 }
