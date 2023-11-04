@@ -1,6 +1,5 @@
 window.onload = function(){
 
-    //let contentElement = document.getElementsByClassName("flexboxI");
 
     fetch('res/json/data.json')//, {mode: 'no-cors'} https://jsonplaceholder.typicode.com/posts "https://jsonkeeper.com/b/L00F"
         .then((response) => response.json())
