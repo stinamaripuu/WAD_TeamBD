@@ -17,9 +17,9 @@ window.onload = function(){
                 let andmedUserLi = document.createElement("li");
                 andmedUserPhotoImg.src = onePostObject.profilePicture;
                 andmedUserPhotoImg.alt = "User photo";
-                andmedUserPhotoImg.addEventListener("error", function(){
-                    andmedUserPhotoImg.src = "https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg"
-                });
+                //andmedUserPhotoImg.addEventListener("error", function(){
+                    //andmedUserPhotoImg.src = "https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg"
+                //});
                 andmedUserPhotoLi.appendChild(andmedUserPhotoImg);
                 andmedDateLi.innerText = onePostObject.time;
                 andmedUserLi.innerText = onePostObject.username;
@@ -36,9 +36,9 @@ window.onload = function(){
                 let postImg = document.createElement("img");
                 postImg.src = onePostObject.imageLink;
                 postImg.alt = onePostObject.title;
-                postImg.addEventListener("error", function(){
-                    postImg.src = "https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg"
-                });
+                //postImg.addEventListener("error", function(){
+                    //postImg.src = "https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg"
+                //});
                 postHeader.innerText = onePostObject.title;
                 postBody.innerText = onePostObject.body;
                 newPostDiv.appendChild(postHeader);
