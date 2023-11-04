@@ -1,7 +1,7 @@
 window.onload = function(){
 
 
-    fetch('res/json/data.json')//, {mode: 'no-cors'} https://jsonplaceholder.typicode.com/posts "https://jsonkeeper.com/b/L00F"
+    fetch('res/json/data.json')
         .then((response) => response.json())
         .then(postsObjects => {
             console.log(postsObjects)
