@@ -18,6 +18,7 @@ window.onload = function(){
                 andmedUserPhotoImg.src = onePostObject.profilePicture;
                 andmedUserPhotoImg.alt = "User photo";
                 //andmedUserPhotoImg.addEventListener("error", function(){
+                    //andmedUserPhotoImg.alt = ""
                     //andmedUserPhotoImg.src = "https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg"
                 //});
                 andmedUserPhotoLi.appendChild(andmedUserPhotoImg);
@@ -33,17 +34,18 @@ window.onload = function(){
                 //header + text + picture
                 let postHeader = document.createElement("p");
                 let postBody = document.createElement("p");
-                let postImg = document.createElement("img");
-                postImg.src = onePostObject.imageLink;
-                postImg.alt = onePostObject.title;
-                //postImg.addEventListener("error", function(){
-                    //postImg.src = "https://images.wondershare.com/repairit/aticle/2021/07/resolve-images-not-showing-problem-1.jpg"
-                //});
                 postHeader.innerText = onePostObject.title;
                 postBody.innerText = onePostObject.body;
                 newPostDiv.appendChild(postHeader);
                 newPostDiv.appendChild(postBody);
-                newPostDiv.appendChild(postImg);
+                let postImg = document.createElement("img");
+                const url = onePostObject.imageLink;
+                if (url !== ""){
+                    postImg.src = onePostObject.imageLink;
+                    postImg.alt = onePostObject.title;
+                    newPostDiv.appendChild(postImg);
+                }
+                else{}
 
                 //where to put element and what class to assign for css
                 newPostDiv.className = "post";
@@ -57,7 +59,7 @@ window.onload = function(){
             errDiv.className = 'post';
             errDiv.innerText = err;
             document.body.appendChild(errDiv);
-            });
+        });
         
         
        
