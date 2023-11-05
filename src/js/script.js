@@ -5,9 +5,11 @@ window.onload = function(){
 
     if (title === "Index"){
 
-        fetch('res/json/data.json')
+        fetch('res/json/data.json') //https://api.jsonbin.io/v3/b/6547e53f0574da7622c27016  res/json/data.json
             .then((response) => response.json())
             .then(postsObjects => {
+                //for fetch replace postsObjects in the upper line with data
+                //const postsObjects = data.record
                 console.log(postsObjects)
                 for(const onePostObject of postsObjects){
                     let newPostDiv = document.createElement("div");
