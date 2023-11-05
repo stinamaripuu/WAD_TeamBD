@@ -370,6 +370,7 @@ Dropdown menu
     border-radius: 5px;
     display: block;
     opacity: 100%;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown-content button:hover{

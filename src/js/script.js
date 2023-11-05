@@ -67,9 +67,15 @@ window.onload = function(){
 
     }
         
-        
-       
-
-
 }; 
+
+function toggleDropdownMenu() {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    dropdownMenu.classList.toggle('show');
+
+};
+
+function navigateToHome() {
+    window.location.href = "index.html";
+};
 
