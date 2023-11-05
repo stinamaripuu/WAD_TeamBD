@@ -38,6 +38,8 @@ header {
 }
 
 .logo{
+    width: 50px;
+    height: 50px;
     margin-inline: 2em;
     border-radius: 50%;
 }
@@ -84,6 +86,10 @@ a:active{
         flex-direction: column;
         align-items: center;
     }
+    .dropdown-content {
+        left: 50%;
+        
+    }
 }
 
 @media (min-width: 800px) {
@@ -94,6 +100,10 @@ a:active{
         flex-direction: column;
         align-items: center;
     }
+    .dropdown-content {
+        left: 50%;
+        
+    }
 }
 
 @media (min-width: 1000px) {
@@ -101,6 +111,12 @@ a:active{
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .dropdown-content {
+        left: 0%;
+        
+    }
+    
 }
 
 .flexboxI {
@@ -295,4 +311,78 @@ footer li {
     display: inline-block; 
     margin: 10px;
     opacity: 0.5;
+}
+
+
+/* 
+Dropdown menu
+*/
+
+/* ... rest of your CSS ... */
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    top: 100%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 20px;
+    padding-inline: 30px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background-color: transparent; 
+    z-index: 2;
+}
+
+/* Pseudo-element for the semi-transparent background */
+.dropdown-content::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #787A7CF7; /* Semi-transparent background */
+    border-radius: 8px; /* Match the border-radius of the dropdown */
+    z-index: -1; /* Position it behind the dropdown content */
+}
+
+
+
+
+.dropdown-content button {
+    display: block;
+    margin-block: 10px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #83715f;
+    color: whitesmoke;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    opacity: 100%;
+}
+
+.dropdown-content button:hover{
+    background-color: #E5C3A6;
+    color: #092747;
+    transition: 150ms;
+}
+
+.dropdown-content button:active{
+    opacity: 0.8;
+}
+
+/* Show the dropdown menu */
+.show {
+    display: block;
 }

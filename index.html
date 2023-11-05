@@ -16,12 +16,16 @@
             <li><a href="#">Home</a></li>
             <li><a href="addPost.html">Add Post</a></li>
         </ul>
-
-        <img src="res/images/images.jpg" class="logo" width="50" height="50" alt="My picture">
+        <div class="logo-container">
+            <img src="res/images/images.jpg" class="logo" alt="My picture" onclick="toggleDropdownMenu()">
+            <div id="dropdownMenu" class="dropdown-content">
+                <p>User Name</p>
+                <p>user@example.com</p>
+                <button id="logoutButton" onclick="logout()">Logout</button>
+            </div>
+        </div>
     </header>
-    <div>
-        
-    </div>
+
     <div class="flexboxI">
         <!--<div class="post">
             <div class="andmed">
